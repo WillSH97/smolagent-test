@@ -1,0 +1,20 @@
+[project]
+name = "smolagent-test"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "WillSH97", email = "williamsh1997@hotmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "litellm>=1.102.1",
+    "smolagents[docker,gradio,toolkit]>=1.26.0",
+]
+
+[project.scripts]
+smolagent-test = "smolagent_test:main"
+
+[build-system]
+requires = ["uv_build>=0.12.19,<0.13.0"]
+build-backend = "uv_build"
