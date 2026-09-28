@@ -2,6 +2,8 @@ import os
 
 from smolagents import CodeAgent, DuckDuckGoSearchTool, GradioUI, LiteLLMModel
 
+from tools import generate_joke, return_random_emoji
+
 api_key = os.environ.get("GROQ_API_KEY")
 
 # 1. Initialize your model and tools
@@ -10,7 +12,7 @@ model = LiteLLMModel(
     api_base="https://api.groq.com/openai/v1",
     api_key=api_key,
 )
-tools = [DuckDuckGoSearchTool()]
+tools = [DuckDuckGoSearchTool(), generate_joke, return_random_emoji()]
 
 # 2. Create the CodeAgent
 agent = CodeAgent(tools=tools, model=model)

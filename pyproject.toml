@@ -9,6 +9,7 @@ authors = [
 requires-python = ">=3.13"
 dependencies = [
     "litellm>=1.102.1",
+    "pyjokes>=0.8.3",
     "smolagents[docker,gradio,toolkit]>=1.26.0",
 ]
 
